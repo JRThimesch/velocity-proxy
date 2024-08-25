@@ -1,5 +1,5 @@
 #!/bin/bash
-version="2"
+version="3"
 echo 'Starting Velocity proxy...'
 echo "Version: $version"
 

@@ -21,6 +21,8 @@ RUN chmod +x velocity-*.sh
 # Download the Velocity proxy jar
 RUN ./velocity-update.sh
 
+COPY velocity.toml /velocity/
+
 EXPOSE 25565
 
 # Start the Velocity proxy (copied in earlier)

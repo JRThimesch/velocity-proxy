@@ -9,21 +9,19 @@ RUN apt update && \
     apt update && \
     apt install -y temurin-21-jdk
 
-# Set the working directory
-WORKDIR /velocity
-
 # Copy in the Velocity install script
 COPY ./velocity-*.sh /velocity/
 
+# Set the working directory
+WORKDIR /velocity
+
 # Ensure the scripts have execute permissions
-RUN chmod +x /velocity/velocity-update.sh /velocity/velocity-start.sh
+RUN chmod +x velocity-*.sh
 
 # Download the Velocity proxy jar
-RUN /velocity/velocity-update.sh && rm /velocity/velocity-update.sh
+RUN ./velocity-update.sh
 
-# I chose to use port 25575 for the Velocity proxy, but you can change this if you want
-# Note that 25575 is not the default.
-EXPOSE 25575
+EXPOSE 25565
 
 # Start the Velocity proxy (copied in earlier)
 CMD ["./velocity-start.sh"]

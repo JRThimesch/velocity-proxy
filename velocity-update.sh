@@ -18,4 +18,4 @@ echo "Latest Build: $latest_build"
 echo "Download Link: $download_link"
 
 # Download the latest build
-wget "$download_link" -O velocity.jar
+wget "$download_link" -O /velocity/velocity.jar

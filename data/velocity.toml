@@ -1,0 +1,8 @@
+[servers]
+survival = "survival.babies-r-us.scootledoo.com"
+creative = "creative.babies-r-us.scootledoo.com"
+
+try = [
+  "survival",
+  "creative"
+]

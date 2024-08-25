@@ -21,7 +21,7 @@ RUN chmod +x velocity-*.sh
 # Download the Velocity proxy jar
 RUN ./velocity-update.sh
 
-COPY velocity.toml /velocity/
+COPY ./velocity.toml /velocity/
 
 EXPOSE 25565
 

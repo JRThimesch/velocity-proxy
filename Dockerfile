@@ -15,12 +15,15 @@ WORKDIR /velocity
 # Copy in the Velocity install script
 COPY ./velocity-*.sh /velocity/
 
+# Ensure the scripts have execute permissions
+RUN chmod +x /velocity/velocity-update.sh /velocity/velocity-start.sh
+
 # Download the Velocity proxy jar
-RUN chmod +x velocity-update.sh && ./velocity-update.sh && rm velocity-update.sh
+RUN /velocity/velocity-update.sh && rm /velocity/velocity-update.sh
 
 # I chose to use port 25575 for the Velocity proxy, but you can change this if you want
 # Note that 25575 is not the default.
 EXPOSE 25575
 
 # Start the Velocity proxy (copied in earlier)
-CMD ["/velocity/velocity-start.sh"] 
+CMD ["/velocity/velocity-start.sh"]

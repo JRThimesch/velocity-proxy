@@ -26,4 +26,4 @@ RUN /velocity/velocity-update.sh && rm /velocity/velocity-update.sh
 EXPOSE 25575
 
 # Start the Velocity proxy (copied in earlier)
-CMD ["/velocity/velocity-start.sh"]
+CMD ["./velocity-start.sh"]

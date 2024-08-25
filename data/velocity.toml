@@ -1,6 +1,6 @@
 [servers]
-survival = "survival.babies-r-us.scootledoo.com"
-creative = "creative.babies-r-us.scootledoo.com"
+survival = "127.0.0.1:25566"
+creative = "127.0.0.1:25568"
 
 try = [
   "survival",

@@ -26,4 +26,4 @@ COPY ./velocity.toml /velocity/
 EXPOSE 25565
 
 # Start the Velocity proxy (copied in earlier)
-CMD ["./velocity-start.sh"]
+ENTRYPOINT ["./velocity-start.sh"]

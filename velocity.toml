@@ -6,8 +6,7 @@ survival = "192.168.10.69:25566"
 creative = "192.168.10.69:25568"
 
 try = [
-  "survival",
-  "creative"
+  "survival"
 ]
 
 [forced-hosts]

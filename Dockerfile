@@ -22,6 +22,8 @@ RUN chmod +x velocity-*.sh
 RUN ./velocity-update.sh
 
 COPY ./velocity.toml /velocity/
+RUN mkdir /velocity/plugins
+COPY ./ambassador.jar /velocity/plugins/
 
 EXPOSE 25565
 

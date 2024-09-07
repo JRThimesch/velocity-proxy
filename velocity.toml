@@ -14,9 +14,10 @@ force-key-authentication = true
 motd = "Babies R Us"
 
 [servers]
+        vanilla = "192.168.10.69:25567"
         survival = "192.168.10.69:25566"
         creative = "192.168.10.69:25568"
-        try = ["survival"]
+        try = ["vanilla", "survival"]
 [advanced]
         #Allows players transferred from other hosts via the
         #Transfer packet (Minecraft 1.20.5) to be received.

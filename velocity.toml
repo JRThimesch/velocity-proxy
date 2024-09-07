@@ -1,5 +1,5 @@
 player-info-forwarding-mode = "modern"
-announce-forge = true
+announce-forge = false
 forced-hosts = {}
 
 #If you are using modern or BungeeGuard IP forwarding, configure a file that contains a unique secret here.
